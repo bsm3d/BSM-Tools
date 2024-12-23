@@ -1,4 +1,4 @@
-**BSM Tools Includes Guide**
+# BSM Tools Includes Guide
 Version 1.0 for Unity 2023+ HDRP
 Created by Benoît Saint-Moulin
 
