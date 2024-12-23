@@ -1,336 +1,161 @@
-BSM Tools Complete Guide
-Version 1.0 for Unity 2023+ HDRP
-Created by Benoît Saint-Moulin
+BSM Tools Suite
+Unity HDRP Extensions & Utilities
+Version 1.0 - 2025
+© Benoît Saint-Moulin
 
-INTRODUCTION
-===========
-The BSM Tools suite provides a comprehensive set of utilities designed to enhance your Unity development workflow. Each tool is crafted to solve specific challenges while maintaining high performance and ease of use.
+Welcome
+=======
+Welcome to the BSM Tools collection. This comprehensive toolset, representing hundreds of development hours, is designed to enhance your Unity experience, streamline your workflow, and fuel your creativity. Created by technical artists, for technical artists in the video game, film, and VFX industries, this collection enhances your Unity work environment with additional features.
 
-ALIGNMENT SYSTEM (BSMAlign)
-==========================
-BSMAlign specializes in precise object positioning and rotation, particularly useful for level design and runtime object placement.
+These tools are built on the best practices from professional 3D practices to streamline your production pipeline.
 
-Core Features:
-- Surface alignment with normal detection
-- Multiple object alignment
-- Random rotation with constraints
-- Advanced axis locking system
+Origins and Purpose
+=================
+Working extensively in both Film and cinematic production with Unity, I encountered a persistent challenge: while Unity offers powerful capabilities for visual creation, many of its tools require programming knowledge that artists shouldn't need to have. This observation led me to develop the BSM Tools Suite, a collection of thoroughly tested, dependency-free scripts that serve both artists seeking ready-to-use tools and technical artists requiring flexible, programmable solutions.
 
-Let's explore how to use these features effectively:
+Two Worlds, One Solution
+----------------------
+The BSM Tools Suite uniquely bridges the gap between immediate usability and technical flexibility. For artists, it provides intuitive, ready-to-use tools accessible directly through Unity's interface. For technical artists and developers, it offers robust, well-documented functions that can be integrated into custom solutions and extended to meet specific project needs.
 
-Basic Surface Alignment:
-```csharp
-// The simplest form - align an object to the surface below it
-var result = BSMAlign.AlignToSurface(transform);
+Installation Guide
+================
 
-// Check if alignment was successful
-if (result.success) {
-    Debug.Log($"Object aligned at angle: {result.angle}");
-}
-```
+Quick Start
+----------
+You have two methods to install BSM Tools, please note you can put the needed file anywhere in Unity if you don't use BSM Tools Suite:
 
-Advanced Alignment with Custom Settings:
-```csharp
-// Create settings to control alignment behavior
-var settings = new BSMAlign.AlignSettings {
-    preserveScale = true,         // Keep the object's original scale
-    preservePosition = false,     // Allow position adjustments
-    lockedAxes = Vector3.up,     // Lock Y-axis rotation
-    maxAngle = 45f,              // Maximum alignment angle
-    blendWeight = 0.8f,          // Smooth transition blend
-    raycastMask = LayerMask.GetMask("Ground", "Platforms")
-};
+Method 1: Direct Script Installation
+1. Create a folder structure: Assets/BSM Tools/includes
+2. Copy the desired script files into the BSM Tools folder
+3. Ensure the 'includes' folder contains all core functionality files
+4. Delete any unused scripts (except those in the includes folder)
 
-// Align to a specific normal
-var result = BSMAlign.AlignToNormal(transform, surfaceNormal, settings);
-```
+Method 2: Package Manager Installation
+1. Open Unity Package Manager (Window > Package Manager)
+2. Add package from git URL or local tarball
+3. Select components to import
+4. Remove unused scripts as needed (preserving the includes folder)
 
-ATMOSPHERIC EFFECTS (BSM_Atmosphere)
-=================================
-BSM_Atmosphere creates dynamic sky and atmospheric effects, perfect for creating immersive environments.
+Important Notes:
+- The 'includes' folder must remain intact when using any BSM scripts
+- Scripts outside the includes folder can be safely removed if unused
+- No dependencies exist between scripts - each functions independently
+- All scripts are compatible with Unity 6.x HDRP
 
-Core Features:
-- Dynamic sky gradient generation
-- Time-based atmospheric haze
-- Customizable color schemes
-- Editor window visualization
+Script Organization
+----------------
+BSM Tools follows a clear organizational structure:
 
-Implementation Examples:
+BSM Tools/
+├── includes/          (Required core files)
+├── BSM_Align.cs       (Object alignment tools)
+├── BSM_Atmosphere.cs  (Bonus Atmospheric effects)
+├── BSM_Debug.cs       (Visual debugging)
+├── BSM_Galaxy.cs      (Bonus Galaxy visualization)
+├── BSM_Math.cs        (Mathematical utilities)
+├── BSM_Physics.cs     (Physics simulation)
+├── BSM_Raycasting.cs  (Advanced raycasting)
+├── BSM_Snap.cs        (Precision snapping)
+└── BSM_Textures.cs    (Texture generation)
 
-Basic Sky Setup:
-```csharp
-// Initialize the atmosphere system
-var atmosphere = new BSM_Atmosphere();
+Best Practices
+============
 
-// Draw basic sky gradient in your editor window
-void OnGUI() {
-    atmosphere.DrawSkyGradient(position);
-}
-```
+For Artists
+---------
+- Start with default settings and adjust gradually
+- Use the Inspector interface for all modifications
+- Save preferred settings as presets
+- Utilize real-time preview features
+- Keep unused scripts removed for clarity
 
-Dynamic Atmospheric Effects:
-```csharp
-// Add atmospheric haze that changes over time
-void Update() {
-    float currentTime = Time.time;
-    atmosphere.DrawAtmosphericHaze(windowRect, currentTime);
-}
-```
+For Technical Artists
+------------------
+- Review script documentation before implementation
+- Test modifications in isolation
+- Maintain script independence
+- Optimize performance-critical sections
+- Document custom implementations
 
-DEBUG VISUALIZATION (BSMDebug)
-===========================
-BSMDebug provides powerful visual debugging tools essential for development and testing.
+Performance Considerations
+=======================
+- All scripts are optimized and probably ready for production use
+- Memory allocation is minimized
+- Batch operations where possible
+- Script execution order is considered
+- Debug features can be disabled for release
 
-Core Features:
-- Point and vector visualization
-- Surface contact display
-- Bounds and zone rendering
-- Customizable debug settings
+Troubleshooting
+=============
+Common Issues and Solutions:
+1. Script Missing Reference:
+   - Verify includes folder is present
+   - Check script location in project
+   - Ensure correct Unity version
 
-Usage Examples:
+2. Performance Issues:
+   - Review debug settings
+   - Check for multiple instances
+   - Verify settings optimization
 
-Basic Debug Visualization:
-```csharp
-// Draw a simple debug point
-BSMDebug.DrawPoint(transform.position, "Object Position");
+3. Visual Artifacts:
+   - Confirm HDRP setup
+   - Review render pipeline settings
+   - Check effect parameters
 
-// Visualize a direction vector
-BSMDebug.DrawVector(transform.position, transform.forward * 2f, "Forward");
-```
-
-Advanced Debug Visualization:
-```csharp
-// Create custom debug settings
-var settings = new BSMDebug.DebugSettings {
-    duration = 5f,               // How long to display
-    persistent = false,          // Temporary display
-    primaryColor = Color.blue,   // Main visualization color
-    secondaryColor = Color.yellow,
-    size = 0.2f,                // Visual element size
-    showLabels = true,          // Display text labels
-    labelOffset = 0.2f          // Label positioning
-};
-
-// Display complex debug information
-BSMDebug.DrawNormal(hitPoint, surfaceNormal, "Surface Normal", settings);
-BSMDebug.DrawSnapZone(transform.position, 2f, "Snap Range", settings);
-```
-
-MATHEMATICAL UTILITIES (BSMMath)
-=============================
-BSMMath provides a comprehensive set of mathematical functions for various calculations and transformations.
-
-Core Features:
-- Unit conversions
-- Geometric calculations
-- Interpolation functions
-- Statistical utilities
-
-Common Applications:
-
-Basic Calculations:
-```csharp
-// Convert units
-float radians = BSMMath.DegreesToRadians(45f);
-float kmh = BSMMath.MetersPerSecondToKilometersPerHour(10f);
-
-// Calculate areas and volumes
-float triangleArea = BSMMath.CalculateTriangleArea(2f, 3f);
-float sphereVolume = BSMMath.CalculateSphereVolume(1f);
-```
-
-Advanced Mathematics:
-```csharp
-// Advanced interpolation
-float progress = BSMMath.CalculateProgress(currentValue, minValue, maxValue);
-float mapped = BSMMath.Map(value, 0f, 1f, -1f, 1f);
-
-// Easing functions for smooth animations
-float easedValue = BSMMath.EaseInOutQuad(time);
-
-// Statistical calculations
-float gaussianValue = BSMMath.Gaussian(0f, 1f);  // Mean and standard deviation
-```
-
-PHYSICS SIMULATION (BSMPhysics)
-============================
-BSMPhysics provides advanced physics simulation capabilities for precise object placement and movement.
-
-Core Features:
-- Physics-based positioning
-- Surface validation
-- Kinematic movement simulation
-- Detailed collision analysis
-
-Implementation Examples:
-
-Basic Physics Simulation:
-```csharp
-// Simple physics simulation
-var result = BSMPhysics.SimulatePhysics(gameObject);
-if (result.success) {
-    Debug.Log($"Simulation completed in {result.timeUsed} seconds");
-}
-```
-
-Advanced Physics Configuration:
-```csharp
-// Configure detailed physics settings
-var settings = new BSMPhysics.PhysicsSettings {
-    maxStepSize = 0.05f,        // Simulation precision
-    maxIterations = 200,        // Iteration limit
-    useGravity = true,
-    collisionMode = CollisionDetectionMode.Continuous,
-    
-    // Surface validation settings
-    surfaceSettings = new BSMRaycasting.SurfaceSettings {
-        maxSlopeAngle = 30f,
-        minArea = 0.05f,
-        requireMeshCollider = true
-    }
-};
-
-// Run detailed simulation
-var result = BSMPhysics.SimulatePhysics(gameObject, settings);
-```
-
-RAYCASTING SYSTEM (BSMRaycasting)
-==============================
-BSMRaycasting extends Unity's built-in raycasting with advanced features and surface validation.
-
-Core Features:
-- Enhanced raycast types (Sphere, Box, Capsule)
-- Surface validation
-- Detailed hit information
-- Visual debugging
-
-Usage Examples:
-
-Basic Raycasting:
-```csharp
-// Simple raycast with hit detection
-var result = BSMRaycasting.Cast(transform.position, Vector3.down);
-if (result.hasHit) {
-    Debug.Log($"Hit surface at {result.hitPoint} with normal {result.hitNormal}");
-}
-```
-
-Advanced Surface Detection:
-```csharp
-// Configure detailed raycast settings
-var raySettings = new BSMRaycasting.RaycastSettings {
-    sphereCast = true,           // Use sphere cast
-    sphereRadius = 0.5f,         // Sphere size
-    layerMask = LayerMask.GetMask("Ground"),
-    debugDraw = true            // Show visual debug
-};
-
-// Set up surface validation
-var surfaceSettings = new BSMRaycasting.SurfaceSettings {
-    minArea = 0.1f,             // Minimum surface size
-    maxSlopeAngle = 30f,        // Maximum slope angle
-    validTags = new[] { "Ground", "Platform" }
-};
-
-// Perform validated cast
-var result = BSMRaycasting.ValidatedCast(
-    transform.position, 
-    Vector3.down,
-    raySettings,
-    surfaceSettings
-);
-```
-
-SNAP SYSTEM (BSMSnap)
-===================
-BSMSnap provides precise object positioning capabilities, particularly useful for level design and object placement.
-
-Core Features:
-- Vertex snapping
-- Grid alignment
-- Surface snapping
-- Bounds calculation
-
-Basic Implementation:
-```csharp
-// Snap to nearest vertex
-var result = BSMSnap.SnapToNearestVertex(transform.position, targetObject);
-if (result.success) {
-    transform.position = result.position;
-}
-
-// Snap to grid
-var gridResult = BSMSnap.SnapToGrid(transform.position, 1f);
-```
-
-Advanced Snapping:
-```csharp
-// Configure detailed snap settings
-var settings = new BSMSnap.SnapSettings {
-    maxDistance = 5f,           // Maximum snap distance
-    useNormal = true,          // Consider surface normals
-    useBaseOffset = true,      // Use object's base for placement
-    layerMask = LayerMask.GetMask("Ground"),
-    tags = new[] { "Snappable" }
-};
-
-// Perform precise snap with validation
-var result = BSMSnap.SnapToNearestVertex(transform.position, targetObject, settings);
-```
-
-TEXTURE GENERATION (BSM_Textures)
-==============================
-BSM_Textures provides comprehensive tools for generating and managing procedural textures.
-
-Core Features:
-- Multiple noise algorithms
-- Normal map generation
-- Texture set management
-- High-quality export options
-
-Basic Texture Generation:
-```csharp
-// Create a simple Perlin noise texture
-var texture = BSM_Textures.CreatePerlinNoiseTexture(512, 512);
-
-// Generate a mask texture
-var mask = BSM_Textures.CreateMaskTexture(512, 512, threshold: 0.5f);
-```
-
-Advanced Texture Creation:
-```csharp
-// Generate complex procedural texture
-var primaryTexture = BSM_Textures.CreateTexture(
-    BSM_Textures.TextureType.FractionalBrownian,
-    512, 512,
-    octaves: 4,
-    persistence: 0.5f,
-    lacunarity: 2f
-);
-
-// Create supporting textures
-var normalMap = BSM_Textures.CreateNormalMapFromTexture(primaryTexture);
-var maskTexture = BSM_Textures.CreateMaskTexture(512, 512, 0.5f);
-
-// Export complete texture set
-var exportResult = BSM_Textures.ExportTextureSet(
-    primaryTexture,
-    normalMap,
-    maskTexture,
-    null,  // Optional coat map
-    "CustomTexture",
-    BSM_Textures.TextureExportFormat.EXR,
-    highQuality: true
-);
-```
-
-BEST PRACTICES AND TIPS
+Technical Specifications
 =====================
-1. Start with basic implementations and gradually add complexity as needed.
-2. Use debug visualization during development to understand tool behavior.
-3. Combine different BSM tools for more complex workflows.
-4. Always check return values and success flags.
-5. Use appropriate settings for your specific use case.
+Environment Requirements:
+- Unity 6.x HDRP
+- Minimal memory footprint
+- No external dependencies
 
-For complete documentation and updates, visit: https://www.bsm3d.com
-Technical support available at: bsm@bsm3d.com# BSM-Tools
+Security and Trust:
+- Protection mechanisms intentionally omitted
+- Focus on reliability and performance
+- Trust-based usage model
+
+Support and Resources
+==================
+Direct Support:
+- Email: bsm@bsm3d.com
+- Website: https://www.bsm3d.com
+
+Additional Resources:
+- Unity's Official API Documentation
+- Unity Learn Tutorials
+
+Support the Development:
+- PayPal donations: helloworld@tdt3d.com
+- Credit in projects: "Benoît Saint-Moulin"
+- Share feedback and suggestions
+
+License and Terms
+===============
+Usage Rights:
+- Free for educational and personal projects
+- Commercial use requires written permission
+- Contact required before modifications
+- Provided "As-is" without warranty
+
+Transparency Notice:
+These tools represent years of industry experience and technical expertise. While thoroughly tested, they embrace software development's iterative nature. AI-assisted tools supported research and debugging, but core design and implementation stem from human expertise and creative vision.
+
+About the Developer
+=================
+Benoît Saint-Moulin is a Belgian expert in 3D and VFX, specializing in real-time 3D and virtual environments. With extensive industry experience, he bridges the gap between artists and developers, combining expertise in 3D, programming, and digital arts.
+
+Key achievements include:
+- ArKaos co-founder
+- Industry collaborations with leading artists and companies
+- Technical documentation author
+- Educational contributions at Haute École Albert Jacquard
+- Certified Belgian government real-time 3D expert
+
+Future Development
+================
+- Regular updates based on user feedback
+- Planned Houdini version
+- Continuous optimization and feature enhancement
+
+Remember to explore, create, and enjoy working with my tools!
