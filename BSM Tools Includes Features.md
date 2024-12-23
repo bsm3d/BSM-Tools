@@ -44,7 +44,7 @@ A comprehensive mathematical utility library providing:
 - Precision mapping algorithms
 - Comprehensive mathematical utilities
 
-### BSM Noise_Textures
+### BSM Noise & Textures
 A sophisticated procedural texture generation system offering:
 - Procedural texture generation
 - Multiple noise algorithms
