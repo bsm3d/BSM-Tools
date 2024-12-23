@@ -6,21 +6,21 @@ INTRODUCTION
 ===========
 The BSM Tools suite provides a comprehensive set of Includes / utilities designed to enhance your Unity development workflow. Each tool is crafted to solve specific challenges while maintaining high performance and ease of use.
 
-Let me introduce each file in the BSM Tools collection:
+Let me introduce each file in the BSM Tools ./includes/:
 
-BSM_Align.cs serves as a sophisticated alignment tool for Unity objects. It handles everything from simple surface alignment to complex multi-object transformations. The tool provides precise control over how objects align with surfaces, including features like normal-based rotation, flexible axis locking, and blend weight controls for smooth transitions.
+**BSM_Align.cs** serves as a sophisticated alignment tool for Unity objects. It handles everything from simple surface alignment to complex multi-object transformations. The tool provides precise control over how objects align with surfaces, including features like normal-based rotation, flexible axis locking, and blend weight controls for smooth transitions.
 
-BSM_Debug.cs is a comprehensive debugging visualization system. It enhances Unity's built-in debugging capabilities by providing advanced tools for visualizing physics interactions, surface contacts, and spatial relationships. The tool includes features for drawing custom gizmos, annotating scenes with labels, and visualizing complex geometric relationships in 3D space.
+**BSM_Debug.cs** is a comprehensive debugging visualization system. It enhances Unity's built-in debugging capabilities by providing advanced tools for visualizing physics interactions, surface contacts, and spatial relationships. The tool includes features for drawing custom gizmos, annotating scenes with labels, and visualizing complex geometric relationships in 3D space.
 
-BSM_Math.cs acts as a mathematical utility library that extends Unity's built-in math capabilities. It provides a wide range of functions from basic unit conversions to advanced geometric calculations. The library includes specialized functions for handling areas, volumes, interpolation, and statistical calculations, making it invaluable for complex mathematical operations in game development.
+**BSM_Math.cs** acts as a mathematical utility library that extends Unity's built-in math capabilities. It provides a wide range of functions from basic unit conversions to advanced geometric calculations. The library includes specialized functions for handling areas, volumes, interpolation, and statistical calculations, making it invaluable for complex mathematical operations in game development.
 
-BSM_Noise_Textures.cs is a powerful procedural texture generation system. It enables the creation of various texture types using different noise algorithms, including Perlin noise, fractional Brownian motion, and Voronoi patterns. The tool can generate complete texture sets including normal maps, mask textures, and coat maps, with support for multiple export formats.
+**BSM_Noise_Textures.cs** is a powerful procedural texture generation system. It enables the creation of various texture types using different noise algorithms, including Perlin noise, fractional Brownian motion, and Voronoi patterns. The tool can generate complete texture sets including normal maps, mask textures, and coat maps, with support for multiple export formats.
 
-BSM_Physics.cs offers advanced physics simulation capabilities beyond Unity's standard physics system. It provides detailed control over physics interactions, including surface validation, iterative physics casting, and sophisticated collision detection. The tool is particularly useful for precise object placement and movement that requires physical accuracy.
+**BSM_Physics.cs** offers advanced physics simulation capabilities beyond Unity's standard physics system. It provides detailed control over physics interactions, including surface validation, iterative physics casting, and sophisticated collision detection. The tool is particularly useful for precise object placement and movement that requires physical accuracy.
 
-BSM_Raycasting.cs presents an enhanced raycasting system with sophisticated surface detection and validation features. It supports multiple cast types (ray, sphere, box, capsule) and provides detailed hit information including surface properties, material information, and precise geometric data. The tool is essential for complex environmental interactions and precise object placement.
+**BSM_Raycasting.cs** presents an enhanced raycasting system with sophisticated surface detection and validation features. It supports multiple cast types (ray, sphere, box, capsule) and provides detailed hit information including surface properties, material information, and precise geometric data. The tool is essential for complex environmental interactions and precise object placement.
 
-BSM_Snap.cs implements a comprehensive snapping system for precise object positioning. It handles vertex snapping, grid snapping, and surface snapping with customizable rules and constraints. The tool includes advanced features for calculating object bounds and handling complex mesh-based snapping scenarios, making it invaluable for level design and object placement tasks.
+**BSM_Snap.cs** implements a comprehensive snapping system for precise object positioning. It handles vertex snapping, grid snapping, and surface snapping with customizable rules and constraints. The tool includes advanced features for calculating object bounds and handling complex mesh-based snapping scenarios, making it invaluable for level design and object placement tasks.
 
 These tools work together to provide a robust framework for handling common game development challenges in Unity, with a focus on precision, flexibility, and ease of use.
 
