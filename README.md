@@ -96,18 +96,15 @@ Security and Trust:
 - Focus on reliability and performance
 - Trust-based usage model
 
-Support and Resources
-==================
-Direct Support:
-- Email: bsm@bsm3d.com
+Resources
+=========
 - Website: https://www.bsm3d.com
 
 Additional Resources:
-- Unity's Official API Documentation
-- Unity Learn Tutorials
+- Unity's Official API Documentation : https://docs.unity3d.com
+- Unity Learn Tutorials : https://learn.unity.com
 
 Support the Development:
-- PayPal donations: helloworld@tdt3d.com
 - Credit in projects: "Benoît Saint-Moulin"
 - Share feedback and suggestions
 
