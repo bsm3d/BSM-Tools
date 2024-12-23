@@ -1,10 +1,10 @@
 # BSM Tools for Unity
 
-A comprehensive toolkit providing advanced features for Unity development. These tools are designed to enhance workflow and provide sophisticated solutions for common game development challenges.
+A comprehensive toolkit providing advanced features for Unity development. These tools are designed to enhance workflow and provide sophisticated solutions for common Artists and Technicals Artists development challenges.
 
 ## 📦 Components
 
-### BSM_Align
+### BSM Align
 A powerful alignment system offering:
 - Object alignment to surfaces
 - Normal and target-based rotation
@@ -17,7 +17,7 @@ A powerful alignment system offering:
 - Advanced transformation blending
 - Layer and distance-aware positioning
 
-### BSM_Debug
+### BSM Debug
 An enhanced debugging visualization system featuring:
 - Advanced debug visualization
 - 3D gizmo rendering
@@ -31,7 +31,7 @@ An enhanced debugging visualization system featuring:
 - Dynamic visualization management
 - Scene debug insights
 
-### BSM_Math
+### BSM Math
 A comprehensive mathematical utility library providing:
 - Unit conversions
 - Area and volume calculations
@@ -44,7 +44,7 @@ A comprehensive mathematical utility library providing:
 - Precision mapping algorithms
 - Comprehensive mathematical utilities
 
-### BSM_Noise_Textures
+### BSM Noise_Textures
 A sophisticated procedural texture generation system offering:
 - Procedural texture generation
 - Multiple noise algorithms
@@ -57,7 +57,7 @@ A sophisticated procedural texture generation system offering:
 - Customizable noise parameters
 - Texture set management
 
-### BSM_Physics
+### BSM Physics
 An advanced physics simulation system featuring:
 - Advanced physics simulation
 - Kinematic object positioning
@@ -70,7 +70,7 @@ An advanced physics simulation system featuring:
 - Surface analysis
 - Configurable physics parameters
 
-### BSM_Raycasting
+### BSM Raycasting
 A sophisticated raycasting system providing:
 - Advanced multi-cast raycast techniques
 - Surface validation algorithms
@@ -83,7 +83,7 @@ A sophisticated raycasting system providing:
 - Physics material and tag filtering
 - Precision casting methods
 
-### BSM_Snap
+### BSM Snap
 A precise object snapping system featuring:
 - Advanced vertex and object snapping
 - Flexible grid positioning
@@ -103,8 +103,7 @@ Credit is appreciated but not required, except when reusing or basing work on th
 
 ## 📫 Contact
 
-For updates and more tools, visit: https://www.bsm3d.com
-For contact and support: bsm@bsm3d.com
+visit: https://www.bsm3d.com
 
 ## ⚡ Compatibility
 - Unity 2023+
