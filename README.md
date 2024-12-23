@@ -28,7 +28,7 @@ Method 1: Direct Script Installation
 1. Create a folder structure: Assets/BSM Tools/includes
 2. Copy the desired script files into the BSM Tools folder
 3. Ensure the 'includes' folder contains all core functionality files
-4. Delete any unused scripts (except those in the includes folder)
+4. Remove unused scripts as needed (preserving the includes folder)
 
 Method 2: Package Manager Installation
 1. Open Unity Package Manager (Window > Package Manager)
