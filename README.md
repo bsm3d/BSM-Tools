@@ -42,22 +42,6 @@ Important Notes:
 - No dependencies exist between scripts - each functions independently
 - All scripts are compatible with Unity 6.x HDRP
 
-Script Organization
-----------------
-BSM Tools follows a clear organizational structure:
-
-BSM Tools/
-├── includes/          (Required core files)
-├── BSM_Align.cs       (Object alignment tools)
-├── BSM_Atmosphere.cs  (Bonus Atmospheric effects)
-├── BSM_Debug.cs       (Visual debugging)
-├── BSM_Galaxy.cs      (Bonus Galaxy visualization)
-├── BSM_Math.cs        (Mathematical utilities)
-├── BSM_Physics.cs     (Physics simulation)
-├── BSM_Raycasting.cs  (Advanced raycasting)
-├── BSM_Snap.cs        (Precision snapping)
-└── BSM_Textures.cs    (Texture generation)
-
 Best Practices
 ============
 
