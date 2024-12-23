@@ -24,13 +24,13 @@ Quick Start
 ----------
 You have two methods to install BSM Tools, please note you can put the needed file anywhere in Unity if you don't use BSM Tools Suite:
 
-Method 1: Direct Script Installation
+**Method 1: Direct Script Installation**
 1. Create a folder structure: Assets/BSM Tools/includes
 2. Copy the desired script files into the BSM Tools folder
 3. Ensure the 'includes' folder contains all core functionality files
 4. Remove unused scripts as needed (preserving the includes folder)
 
-Method 2: Package Manager Installation
+**Method 2: Package Manager Installation**
 1. Open Unity Package Manager (Window > Package Manager)
 2. Add package from git URL or local tarball
 3. Select components to import
@@ -41,9 +41,6 @@ Important Notes:
 - Scripts outside the includes folder can be safely removed if unused
 - No dependencies exist between scripts - each functions independently
 - All scripts are compatible with Unity 6.x HDRP
-
-Best Practices
-============
 
 For Artists
 ---------
@@ -62,8 +59,8 @@ For Technical Artists
 - Document custom implementations
 
 Performance Considerations
-=======================
-- All scripts are optimized and probably ready for production use
+===========================
+- All scripts are "as my best" optimized and ready for production use
 - Memory allocation is minimized
 - Batch operations where possible
 - Script execution order is considered
