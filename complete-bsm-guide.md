@@ -1,14 +1,14 @@
-BSM Tools Complete Guide
+BSM Tools Includes Guide
 Version 1.0 for Unity 2023+ HDRP
 Created by Benoît Saint-Moulin
 
 INTRODUCTION
 ===========
-The BSM Tools suite provides a comprehensive set of utilities designed to enhance your Unity development workflow. Each tool is crafted to solve specific challenges while maintaining high performance and ease of use.
+The BSM Tools suite provides a comprehensive set of Includes / utilities designed to enhance your Unity development workflow. Each tool is crafted to solve specific challenges while maintaining high performance and ease of use.
 
-ALIGNMENT SYSTEM (BSMAlign)
-==========================
-BSMAlign specializes in precise object positioning and rotation, particularly useful for level design and runtime object placement.
+ALIGNMENT SYSTEM (BSM Align)
+============================
+BSM Align specializes in precise object positioning and rotation, particularly useful for level design and runtime object placement.
 
 Core Features:
 - Surface alignment with normal detection
@@ -45,41 +45,9 @@ var settings = new BSMAlign.AlignSettings {
 var result = BSMAlign.AlignToNormal(transform, surfaceNormal, settings);
 ```
 
-ATMOSPHERIC EFFECTS (BSM_Atmosphere)
-=================================
-BSM_Atmosphere creates dynamic sky and atmospheric effects, perfect for creating immersive environments.
-
-Core Features:
-- Dynamic sky gradient generation
-- Time-based atmospheric haze
-- Customizable color schemes
-- Editor window visualization
-
-Implementation Examples:
-
-Basic Sky Setup:
-```csharp
-// Initialize the atmosphere system
-var atmosphere = new BSM_Atmosphere();
-
-// Draw basic sky gradient in your editor window
-void OnGUI() {
-    atmosphere.DrawSkyGradient(position);
-}
-```
-
-Dynamic Atmospheric Effects:
-```csharp
-// Add atmospheric haze that changes over time
-void Update() {
-    float currentTime = Time.time;
-    atmosphere.DrawAtmosphericHaze(windowRect, currentTime);
-}
-```
-
-DEBUG VISUALIZATION (BSMDebug)
-===========================
-BSMDebug provides powerful visual debugging tools essential for development and testing.
+DEBUG VISUALIZATION (BSM Debug)
+===============================
+BSM Debug provides powerful visual debugging tools essential for development and testing.
 
 Core Features:
 - Point and vector visualization
@@ -116,9 +84,9 @@ BSMDebug.DrawNormal(hitPoint, surfaceNormal, "Surface Normal", settings);
 BSMDebug.DrawSnapZone(transform.position, 2f, "Snap Range", settings);
 ```
 
-MATHEMATICAL UTILITIES (BSMMath)
-=============================
-BSMMath provides a comprehensive set of mathematical functions for various calculations and transformations.
+MATHEMATICAL UTILITIES (BSM Math)
+=================================
+BSM Math provides a comprehensive set of mathematical functions for various calculations and transformations.
 
 Core Features:
 - Unit conversions
@@ -152,9 +120,9 @@ float easedValue = BSMMath.EaseInOutQuad(time);
 float gaussianValue = BSMMath.Gaussian(0f, 1f);  // Mean and standard deviation
 ```
 
-PHYSICS SIMULATION (BSMPhysics)
-============================
-BSMPhysics provides advanced physics simulation capabilities for precise object placement and movement.
+PHYSICS SIMULATION (BSM Physics)
+================================
+BSM Physics provides advanced physics simulation capabilities for precise object placement and movement.
 
 Core Features:
 - Physics-based positioning
@@ -194,9 +162,9 @@ var settings = new BSMPhysics.PhysicsSettings {
 var result = BSMPhysics.SimulatePhysics(gameObject, settings);
 ```
 
-RAYCASTING SYSTEM (BSMRaycasting)
-==============================
-BSMRaycasting extends Unity's built-in raycasting with advanced features and surface validation.
+RAY CASTING SYSTEM (BSM Raycasting)
+====================================
+BSM Raycasting extends Unity's built-in raycasting with advanced features and surface validation.
 
 Core Features:
 - Enhanced raycast types (Sphere, Box, Capsule)
@@ -241,9 +209,9 @@ var result = BSMRaycasting.ValidatedCast(
 );
 ```
 
-SNAP SYSTEM (BSMSnap)
-===================
-BSMSnap provides precise object positioning capabilities, particularly useful for level design and object placement.
+SNAP SYSTEM (BSM Snap)
+=======================
+BSM Snap provides precise object positioning capabilities, particularly useful for level design and object placement.
 
 Core Features:
 - Vertex snapping
@@ -278,9 +246,9 @@ var settings = new BSMSnap.SnapSettings {
 var result = BSMSnap.SnapToNearestVertex(transform.position, targetObject, settings);
 ```
 
-TEXTURE GENERATION (BSM_Textures)
-==============================
-BSM_Textures provides comprehensive tools for generating and managing procedural textures.
+TEXTURE GENERATION (BSM Textures)
+==================================
+BSM Textures provides comprehensive tools for generating and managing procedural textures.
 
 Core Features:
 - Multiple noise algorithms
@@ -328,7 +296,7 @@ BEST PRACTICES AND TIPS
 =====================
 1. Start with basic implementations and gradually add complexity as needed.
 2. Use debug visualization during development to understand tool behavior.
-3. Combine different BSM tools for more complex workflows.
+3. Combine different BSM tools Includes for more complex workflows.
 4. Always check return values and success flags.
 5. Use appropriate settings for your specific use case.
 
