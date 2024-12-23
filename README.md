@@ -1,4 +1,4 @@
-BSM Tools Suite
+**BSM Tools Suite**
 Unity HDRP Extensions & Utilities
 Version 1.0 - 2025
 © Benoît Saint-Moulin
