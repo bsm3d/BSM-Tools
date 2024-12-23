@@ -9,8 +9,8 @@ Welcome to the BSM Tools collection. This comprehensive toolset, representing hu
 
 These tools are built on the best practices from professional 3D practices to streamline your production pipeline.
 
-Origins and Purpose
-=================
+Why ?
+=====
 Working extensively in both Film and cinematic production with Unity, I encountered a persistent challenge: while Unity offers powerful capabilities for visual creation, many of its tools require programming knowledge that artists shouldn't need to have. This observation led me to develop the BSM Tools Suite, a collection of thoroughly tested, dependency-free scripts that serve both artists seeking ready-to-use tools and technical artists requiring flexible, programmable solutions.
 
 Two Worlds, One Solution
