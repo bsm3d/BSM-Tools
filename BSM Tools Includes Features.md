@@ -101,10 +101,6 @@ A precise object snapping system featuring:
 These tools are provided as-is without any warranty. You are free to use them in personal projects.
 Credit is appreciated but not required, except when reusing or basing work on this code.
 
-## 📫 Contact
-
-visit: https://www.bsm3d.com
-
 ## ⚡ Compatibility
 - Unity 2023+
 - HDRP
@@ -114,4 +110,4 @@ visit: https://www.bsm3d.com
 Current Version: 1.0 - Stable & Production-Ready
 
 ## ©️ Author
-Benoît Saint-Moulin © 2025
+BSM3D © 2025
