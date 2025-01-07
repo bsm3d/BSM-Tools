@@ -1,7 +1,7 @@
 # BSM Tools Suite
 Unity HDRP Extensions & Utilities
 Version 1.0 - 2025
-© Benoît Saint-Moulin
+© BSM3D
 
 Welcome
 =======
@@ -96,16 +96,12 @@ Security and Trust:
 - Focus on reliability and performance
 - Trust-based usage model
 
-Resources
-=========
-- Website: https://www.bsm3d.com
-
 Additional Resources:
 - Unity's Official API Documentation : https://docs.unity3d.com
 - Unity Learn Tutorials : https://learn.unity.com
 
 Support the Development:
-- Credit in projects: "Benoît Saint-Moulin"
+- Credit in projects: "BSM3D"
 - Share feedback and suggestions
 
 License and Terms
@@ -121,19 +117,11 @@ These tools represent years of industry experience and technical expertise. Whil
 
 About the Developer
 =================
-Benoît Saint-Moulin is a Belgian expert in 3D and VFX, specializing in real-time 3D and virtual environments. With extensive industry experience, he bridges the gap between artists and developers, combining expertise in 3D, programming, and digital arts.
-
-Key achievements include:
-- ArKaos co-founder
-- Industry collaborations with leading artists and companies
-- Technical documentation author
-- Educational contributions at Haute École Albert Jacquard
-- Certified Belgian government real-time 3D expert
+BSM3D is a Belgian expert in 3D and VFX, specializing in real-time 3D and virtual environments. With extensive industry experience, he bridges the gap between artists and developers, combining expertise in 3D, programming, and digital arts.
 
 Future Development
 ================
 - Regular updates based on user feedback
-- Planned Houdini version
 - Continuous optimization and feature enhancement
 
 Remember to explore, create, and enjoy working with my tools!
