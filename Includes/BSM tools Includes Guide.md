@@ -1,6 +1,6 @@
 # BSM Tools Includes Guide
 Version 1.0 for Unity 2023+ HDRP
-Created by Benoît Saint-Moulin
+Created by BSM3D
 
 INTRODUCTION
 ===========
@@ -318,7 +318,5 @@ BEST PRACTICES AND TIPS
 3. Combine different BSM tools Includes for more complex workflows.
 4. Always check return values and success flags.
 5. Use appropriate settings for your specific use case.
-
-visit: https://www.bsm3d.com
 
 
