@@ -83,6 +83,19 @@ A sophisticated raycasting system providing:
 - Physics material and tag filtering
 - Precision casting methods
 
+### BSM Scatter
+An advanced procedural scattering system featuring:
+- Distribution algorithms for natural-looking placement
+- Multi-layered noise field generation
+- Adaptive clustering systems
+- Dynamic ecological pattern generation
+- High-performance optimization systems
+- Smart placement validation
+- Advanced random sampling methods
+- Efficient spatial partitioning
+- Real-time point cloud analysis
+- Intelligent distribution management
+
 ### BSM Snap
 A precise object snapping system featuring:
 - Advanced vertex and object snapping
