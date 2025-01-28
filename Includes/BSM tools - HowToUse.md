@@ -20,6 +20,8 @@ Let me introduce each file in the BSM Tools ./includes/:
 
 **BSM_Raycasting.cs** presents an enhanced raycasting system with sophisticated surface detection and validation features. It supports multiple cast types (ray, sphere, box, capsule) and provides detailed hit information including surface properties, material information, and precise geometric data. The tool is essential for complex environmental interactions and precise object placement.
 
+**BSM_Scatter.cs** implements a comprehensive procedural distribution system for natural object placement. It handles various distribution patterns including Poisson disk, DLA (Diffusion-Limited Aggregation), and Wang tiles with customizable parameters and constraints. The tool includes advanced features for generating ecological patterns, handling terrain-aware placement, and optimizing large-scale distributions, making it invaluable for environment creation and natural landscape generation tasks.
+
 **BSM_Snap.cs** implements a comprehensive snapping system for precise object positioning. It handles vertex snapping, grid snapping, and surface snapping with customizable rules and constraints. The tool includes advanced features for calculating object bounds and handling complex mesh-based snapping scenarios, making it invaluable for level design and object placement tasks.
 
 These tools work together to provide a robust framework for handling common game development challenges in Unity, with a focus on precision, flexibility, and ease of use.
