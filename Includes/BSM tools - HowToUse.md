@@ -230,6 +230,55 @@ var result = BSMRaycasting.ValidatedCast(
 );
 ```
 
+**SCATTER SYSTEM (BSM Scatter)**
+============================
+BSM Scatter provides advanced procedural distribution capabilities, particularly useful for environment creation and natural landscape generation.
+
+Core Features:
+- Natural distribution algorithms (Poisson disk, DLA, Wang tiles)
+- Terrain-aware placement
+- Density and clustering control
+- Performance optimization
+
+Basic Implementation:
+```csharp
+// The simplest form - distribute objects in a zone
+var zone = new BSMScatter.ScatterZone(transform.position, new Vector3(10, 0, 10), Vector3.up, 0f);
+var result = await BSMScatter.GenerateTreeDistributionAsync(zone, 2f, ScatterSettings.Default);
+
+// Apply the distribution to objects
+foreach(var point in result) {
+    Instantiate(prefab, point.Position, Quaternion.Euler(0, point.Rotation, 0));
+}
+```
+
+Advanced Implementation:
+```csharp
+// Create settings to control distribution behavior
+var settings = new BSMScatter.ScatterSettings {
+    minScale = 0.8f,              // Minimum scale variation
+    maxScale = 1.2f,              // Maximum scale variation
+    alignToNormal = true,         // Align to surface normal
+    randomRotationWeight = 0.3f,  // Random rotation influence
+    densityFalloff = AnimationCurve.Linear(0, 1, 1, 0),
+    jitterStrength = 0.5f         // Position randomization
+};
+
+// Create a zone with height and slope constraints
+var zone = new BSMScatter.ScatterZone(
+    center: transform.position,
+    size: new Vector3(20, 0, 20),
+    normal: Vector3.up,
+    slope: 45f,
+    slopeFalloff: AnimationCurve.EaseInOut(0, 1, 1, 0),
+    minHeight: 0f,
+    maxHeight: 10f
+);
+
+// Generate clustered distribution
+var result = BSMScatter.GenerateClusteredDistribution(zone, 5, 10, 2f, settings);
+```
+
 SNAP SYSTEM (BSM Snap)
 =======================
 BSM Snap provides precise object positioning capabilities, particularly useful for level design and object placement.
